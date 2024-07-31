@@ -14,8 +14,10 @@
         android:layout_height="176dp"
         android:layout_marginStart="8dp"
         android:layout_marginBottom="16dp"
+        android:backgroundTint="@android:color/holo_orange_dark"
         android:text="ENTER"
         android:textAppearance="@style/TextoEnter"
+        android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnZero"
         app:layout_constraintHorizontal_bias="0.5"
@@ -26,8 +28,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
+        android:backgroundTint="@android:color/darker_gray"
         android:minWidth="48dp"
         android:text="1"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/btnZero"
         app:layout_constraintStart_toStartOf="@+id/btnZero" />
 
@@ -35,8 +39,10 @@
         android:id="@+id/btnZero"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/darker_gray"
         android:minWidth="48dp"
         android:text="0"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/btnEnter"
         app:layout_constraintEnd_toStartOf="@+id/btnVirgula"
         app:layout_constraintHorizontal_bias="0.5"
@@ -46,8 +52,10 @@
         android:id="@+id/btnVirgula"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/darker_gray"
         android:minWidth="48dp"
         android:text=","
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/btnZero"
         app:layout_constraintEnd_toStartOf="@+id/btnBack"
         app:layout_constraintHorizontal_bias="0.5"
@@ -57,10 +65,13 @@
         android:id="@+id/btnBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_orange_light"
         android:minWidth="48dp"
+        android:textColor="@color/white"
         app:icon="@drawable/baseline_backspace_24"
         app:iconPadding="0dp"
         app:iconSize="10dp"
+        app:iconTint="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/btnVirgula"
         app:layout_constraintEnd_toStartOf="@+id/btnAdicao"
         app:layout_constraintHorizontal_bias="0.5"
@@ -70,8 +81,10 @@
         android:id="@+id/btnAdicao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/darker_gray"
         android:minWidth="48dp"
         android:text="+"
+        android:textColor="#FFC107"
         app:layout_constraintBottom_toBottomOf="@+id/btnBack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -81,8 +94,10 @@
         android:id="@+id/btnDois"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/darker_gray"
         android:minWidth="48dp"
         android:text="2"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/btnUm"
         app:layout_constraintStart_toStartOf="@+id/btnVirgula" />
 
@@ -90,8 +105,10 @@
         android:id="@+id/btnSubtracao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/darker_gray"
         android:minWidth="48dp"
         android:text="-"
+        android:textColor="#FFC107"
         app:layout_constraintBottom_toBottomOf="@+id/btnTres"
         app:layout_constraintStart_toStartOf="@+id/btnAdicao" />
 
@@ -99,8 +116,10 @@
         android:id="@+id/btnTres"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/darker_gray"
         android:minWidth="48dp"
         android:text="3"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/btnDois"
         app:layout_constraintStart_toStartOf="@+id/btnBack" />
 
@@ -109,8 +128,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
+        android:backgroundTint="@android:color/darker_gray"
         android:minWidth="48dp"
         android:text="4"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/btnUm"
         app:layout_constraintStart_toStartOf="@+id/btnUm" />
 
@@ -118,8 +139,10 @@
         android:id="@+id/btnCInco"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/darker_gray"
         android:minWidth="48dp"
         android:text="5"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/btnQuatro"
         app:layout_constraintStart_toStartOf="@+id/btnDois" />
 
@@ -127,8 +150,10 @@
         android:id="@+id/btnSeis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/darker_gray"
         android:minWidth="48dp"
         android:text="6"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/btnCInco"
         app:layout_constraintStart_toStartOf="@+id/btnTres" />
 
@@ -137,8 +162,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
+        android:backgroundTint="@android:color/darker_gray"
         android:minWidth="48dp"
         android:text="7"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/btnQuatro"
         app:layout_constraintStart_toStartOf="@+id/btnQuatro" />
 
@@ -146,8 +173,10 @@
         android:id="@+id/btnOIto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/darker_gray"
         android:minWidth="48dp"
         android:text="8"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/btnSete"
         app:layout_constraintStart_toStartOf="@+id/btnCInco" />
 
@@ -155,8 +184,10 @@
         android:id="@+id/btnNove"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/darker_gray"
         android:minWidth="48dp"
         android:text="9"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/btnOIto"
         app:layout_constraintStart_toStartOf="@+id/btnSeis" />
 
@@ -164,8 +195,10 @@
         android:id="@+id/btnMultiplicacao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/darker_gray"
         android:minWidth="48dp"
         android:text="x"
+        android:textColor="#FFC107"
         app:layout_constraintBottom_toBottomOf="@+id/btnSeis"
         app:layout_constraintStart_toStartOf="@+id/btnSubtracao" />
 
@@ -173,8 +206,10 @@
         android:id="@+id/btnDivisao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/darker_gray"
         android:minWidth="48dp"
         android:text="/"
+        android:textColor="@android:color/holo_orange_light"
         app:layout_constraintBottom_toBottomOf="@+id/btnNove"
         app:layout_constraintStart_toStartOf="@+id/btnMultiplicacao" />
 
@@ -182,8 +217,22 @@
         android:id="@+id/btnClear"
         android:layout_width="56dp"
         android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/darker_gray"
         android:minWidth="48dp"
         android:text="C"
+        android:textColor="#F62D1E"
         app:layout_constraintBottom_toBottomOf="@+id/btnSete"
         app:layout_constraintStart_toStartOf="@+id/btnEnter" />
+
+    <EditText
+        android:id="@+id/visor"
+        android:layout_width="358dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="32dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textAlignment="textEnd"
+        app:layout_constraintBottom_toTopOf="@+id/btnOIto"
+        app:layout_constraintEnd_toEndOf="@+id/btnDivisao"
+        app:layout_constraintStart_toStartOf="@+id/btnClear" />
 </androidx.constraintlayout.widget.ConstraintLayout>

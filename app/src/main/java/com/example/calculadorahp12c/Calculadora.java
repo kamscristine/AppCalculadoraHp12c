@@ -33,7 +33,11 @@ public class Calculadora {
     }
 
     public void enter(){
+        if(modo == MODO_ERROR){
+            modo = MODO_EXIBINDO;
+        }
         if (modo == MODO_EDITANDO){
+
             operandos.push(numero);
             modo = MODO_EXIBINDO;
         }
@@ -47,16 +51,16 @@ public class Calculadora {
         double op1 = Optional.ofNullable(operandos.pollFirst()).orElse(0.0);
         double op2 = Optional.ofNullable(operandos.pollFirst()).orElse(0.0);
         numero = operacao.apply(op1, op2);
+        System.out.println(numero);
         operandos.push(numero);
     }
 
     public void soma(){
-
         executarOperacao((op1, op2) -> op1 + op2);
     }
 
     public void subtracao(){
-        executarOperacao((op1, op2) -> op1 - op2);
+        executarOperacao((op1, op2) -> op2 - op1);
     }
 
     public void multiplicacao(){
@@ -70,8 +74,7 @@ public class Calculadora {
             modo = MODO_ERROR;
             return;
         }
-        executarOperacao((op1, op2) -> op1 / op2);
-
+        executarOperacao((op1, op2) -> op2 / op1);
     }
 
 }

@@ -26,6 +26,11 @@ public class MainActivity extends AppCompatActivity {
 
     private Button btnEnter;
     private Button btnBackSpace;
+    private Button btnAdicao;
+    private Button btnSubtracao;
+    private Button btnMultiplicacao;
+    private Button btnDivisao;
+    private  Button btnClear;
 
     private EditText visor;
 
@@ -42,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+        calculadora = new Calculadora();
+
         btn1 = findViewById(R.id.btnUm);
         btn2 = findViewById(R.id.btnDois);
         btn3 = findViewById(R.id.btnTres);
@@ -55,9 +62,15 @@ public class MainActivity extends AppCompatActivity {
 
         btnEnter = findViewById(R.id.btnEnter);
         btnBackSpace = findViewById(R.id.btnBack);
+        btnAdicao = findViewById(R.id.btnAdicao);
+        btnSubtracao = findViewById(R.id.btnSubtracao);
+        btnMultiplicacao = findViewById(R.id.btnMultiplicacao);
+        btnDivisao = findViewById(R.id.btnDivisao);
+        btnClear = findViewById(R.id.btnClear);
 
         visor = findViewById(R.id.visor);
         visor.setShowSoftInputOnFocus(false); // nao deixa o teclado do proprio celular aparecer
+
 
         btn1.setOnClickListener(botaoCLick("1"));
         btn2.setOnClickListener(botaoCLick("2"));
@@ -74,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
             double valor = Double.valueOf(visor.getText().toString());
             calculadora.setNumero(valor);
             calculadora.enter();
+            visor.setText("");
         });
 
         btnBackSpace.setOnClickListener((v) -> {
@@ -81,6 +95,44 @@ public class MainActivity extends AppCompatActivity {
             inicioSelecao = Math.max(inicioSelecao, 0);
             int finalSelecao = visor.getSelectionEnd();
             visor.getText().delete(inicioSelecao, finalSelecao);
+        });
+
+        //VERIFICAR MODOS , EXIBINDO E EDITANDO
+        btnAdicao.setOnClickListener((v) -> {
+            double valorVisor = Double.valueOf(visor.getText().toString());
+            calculadora.setNumero(valorVisor);
+            calculadora.soma();
+            String valor = String.valueOf(calculadora.getNumero());
+            visor.setText(valor);
+        });
+
+        btnSubtracao.setOnClickListener((v) -> {
+            double valorVisor = Double.valueOf(visor.getText().toString());
+            calculadora.setNumero(valorVisor);
+            calculadora.subtracao();
+            String valor = String.valueOf(calculadora.getNumero());
+            visor.setText(valor);
+        });
+
+        btnMultiplicacao.setOnClickListener((v) -> {
+            double valorVisor = Double.valueOf(visor.getText().toString());
+            calculadora.setNumero(valorVisor);
+            calculadora.multiplicacao();
+            String valor = String.valueOf(calculadora.getNumero());
+            visor.setText(valor);
+        });
+
+        btnDivisao.setOnClickListener((v) -> {
+            double valorVisor = Double.valueOf(visor.getText().toString());
+            calculadora.setNumero(valorVisor);
+            calculadora.divisao();
+            String valor = String.valueOf(calculadora.getNumero());
+            visor.setText(valor);
+        });
+
+        btnClear.setOnClickListener((v) -> {
+            visor.setText("");
+            calculadora = new Calculadora();
         });
 
     }

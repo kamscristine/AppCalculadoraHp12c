@@ -45,7 +45,7 @@ public class Calculadora {
 
 
     public void executarOperacao(BiFunction<Double, Double, Double> operacao){
-        if(modo == MODO_EDITANDO){
+        if(modo == MODO_EDITANDO || modo == MODO_ERROR){
             enter();
         }
         double op1 = Optional.ofNullable(operandos.pollFirst()).orElse(0.0);

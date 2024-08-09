@@ -68,4 +68,16 @@ public class CalculadoraTest {
         assertEquals(82.0, calc.getNumero());
     }
 
+    @Test
+    public void divisaoABC(){
+        Calculadora calc = new Calculadora();
+        calc.setNumero(27);
+        calc.enter();
+        calc.setNumero(3);
+        calc.divisao();
+        assertEquals(9.0, calc.getNumero());
+        calc.setNumero(3);
+        calc.divisao();
+        assertEquals(3.0, calc.getNumero());
+    }
 }
